@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Portafolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0a1f44, #000000);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #4da6ff;
+    }
+
+    header p {
+      color: #cccccc;
+      margin-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #000000cc;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #4da6ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4da6ff;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #4da6ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .proyecto {
+      background: #111;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .proyecto:hover {
+      transform: scale(1.03);
+      background: #1a1a1a;
+    }
+
+    button {
+      background: #4da6ff;
+      border: none;
+      padding: 10px 20px;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #3399ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Tu Nombre</h1>
+    <p>Desarrollador Web | Portafolio</p>
+  </header>
+
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+      Hola, soy un desarrollador apasionado por la tecnología y la creación de páginas web modernas.
+      Este es mi portafolio donde muestro algunos de mis proyectos.
+    </p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+
+    <div class="proyecto">
+      <h3>Proyecto 1</h3>
+      <p>Descripción breve del proyecto.</p>
+      <button onclick="verProyecto('Proyecto 1')">Ver más</button>
+    </div>
+
+    <div class="proyecto">
+      <h3>Proyecto 2</h3>
+      <p>Descripción breve del proyecto.</p>
+      <button onclick="verProyecto('Proyecto 2')">Ver más</button>
+    </div>
+
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: tuemail@email.com</p>
+    <button onclick="mostrarMensaje()">Enviar mensaje</button>
+  </section>
+
+  <footer>
+    <p>© 2026 - Mi Portafolio</p>
+  </footer>
+
+  <script>
+    function verProyecto(nombre) {
+      alert("Estás viendo: " + nombre);
+    }
+
+    function mostrarMensaje() {
+      alert("¡Gracias por visitar mi portafolio!");
+    }
+  </script>
+
+</body>
+</html>
