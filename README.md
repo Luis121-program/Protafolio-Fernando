@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Portafolio Pro</title>
+  <title>Mi Portafolio de Luis Pro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fuente -->
