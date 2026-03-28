@@ -1,169 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Portafolio de Luis Pro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio | Luis Fernando</title>
 
-  <!-- Fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    body {
-      background: linear-gradient(135deg, #000000, #020a1f, #000000);
-      color: white;
-      overflow-x: hidden;
-    }
+body {
+  background: radial-gradient(circle at top, #0a0f2c, #000000 60%);
+  color: white;
+  overflow-x: hidden;
+}
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      animation: fadeDown 1.5s ease;
-    }
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    header h1 {
-      font-size: 3rem;
-      color: #4da6ff;
-      text-shadow: 0 0 15px #4da6ff;
-    }
+nav a {
+  color: #6aa8ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px;
-      background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav a:hover {
+  color: #b57cff;
+  text-shadow: 0 0 10px #6aa8ff;
+}
 
-    nav a {
-      color: #4da6ff;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+/* HEADER */
+header {
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeDown 1.5s ease;
+}
 
-    nav a:hover {
-      color: white;
-      text-shadow: 0 0 10px #4da6ff;
-    }
+header h1 {
+  font-size: 3.2rem;
+  background: linear-gradient(90deg, #6aa8ff, #b57cff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-    section {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: 1s;
-    }
+header p {
+  color: #aaa;
+}
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* SECCIONES */
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
 
-    h2 {
-      color: #4da6ff;
-      margin-bottom: 20px;
-    }
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* Proyectos */
-    .proyecto {
-      background: #0a0a0a;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      transition: 0.4s;
-      box-shadow: 0 0 10px #000;
-    }
+h2 {
+  color: #6aa8ff;
+  margin-bottom: 20px;
+}
 
-    .proyecto:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px #4da6ff;
-    }
+/* TARJETAS */
+.card {
+  background: #0c0c0c;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  transition: 0.4s;
+  box-shadow: 0 0 15px #000;
+}
 
-    /* Habilidades */
-    .skill {
-      margin: 20px 0;
-    }
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #6aa8ff;
+}
 
-    .bar {
-      height: 10px;
-      background: #222;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+/* HABILIDADES */
+.skill {
+  margin: 20px 0;
+}
 
-    .progress {
-      height: 100%;
-      width: 0;
-      background: linear-gradient(90deg, #4da6ff, #00c3ff);
-      transition: 2s;
-    }
+.bar {
+  height: 12px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-    /* Botones */
-    button {
-      background: #4da6ff;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #6aa8ff, #b57cff);
+  transition: 2s;
+}
 
-    button:hover {
-      box-shadow: 0 0 10px #4da6ff;
-    }
+/* BOTONES */
+button {
+  background: linear-gradient(90deg, #6aa8ff, #b57cff);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
 
-    /* Redes */
-    .redes {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-    }
+button:hover {
+  box-shadow: 0 0 15px #6aa8ff;
+}
 
-    .redes a {
-      color: #4da6ff;
-      font-size: 1.5rem;
-      transition: 0.3s;
-    }
+/* REDES */
+.redes {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
 
-    .redes a:hover {
-      color: white;
-      text-shadow: 0 0 10px #4da6ff;
-    }
+.redes a {
+  font-size: 1.6rem;
+  color: #6aa8ff;
+  transition: 0.3s;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: black;
-      margin-top: 40px;
-    }
+.redes a:hover {
+  color: #b57cff;
+}
 
-    /* Animaciones */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  margin-top: 40px;
+}
+
+/* ANIMACIONES */
+@keyframes fadeDown {
+  from {opacity:0; transform:translateY(-50px);}
+  to {opacity:1; transform:translateY(0);}
+}
+</style>
 </head>
 
 <body>
-
-<header>
-  <h1>Tu Nombre Luis Fernando</h1>
-  <p>Desarrollador Web</p>
-</header>
 
 <nav>
   <a href="#sobre">Sobre mí</a>
@@ -172,24 +173,33 @@
   <a href="#contacto">Contacto</a>
 </nav>
 
+<header>
+  <h1>Luis Fernando</h1>
+  <p>Estudiante de Ingeniería Estadística e Informática</p>
+</header>
+
 <section id="sobre">
   <h2>Sobre mí</h2>
-  <p>Soy desarrollador web apasionado, con hambre de conocimiento.</p>
+  <p>
+    Soy estudiante de Ingeniería Estadística e Informática, apasionado por la tecnología,
+    el análisis de datos y el desarrollo web moderno. Busco mejorar continuamente mis habilidades
+    y crear proyectos innovadores.
+  </p>
 </section>
 
 <section id="proyectos">
   <h2>Proyectos</h2>
 
-  <div class="proyecto">
+  <div class="card">
     <h3>Proyecto 1</h3>
-    <p>Descripción de tu proyecto.</p>
-    <button onclick="alert('Proyecto 1')">Ver</button>
+    <p>Aplicación web en desarrollo.</p>
+    <button onclick="alert('Proyecto en construcción')">Ver</button>
   </div>
 
-  <div class="proyecto">
+  <div class="card">
     <h3>Proyecto 2</h3>
-    <p>Descripción de tu proyecto.</p>
-    <button onclick="alert('Proyecto 2')">Ver</button>
+    <p>Análisis de datos y visualización.</p>
+    <button onclick="alert('Proyecto en construcción')">Ver</button>
   </div>
 
 </section>
@@ -204,7 +214,7 @@
 
   <div class="skill">
     <p>CSS</p>
-    <div class="bar"><div class="progress" data-width="80%"></div></div>
+    <div class="bar"><div class="progress" data-width="85%"></div></div>
   </div>
 
   <div class="skill">
@@ -224,35 +234,29 @@
     <a href="#">🐙</a>
   </div>
 
-  <button onclick="alert('Mensaje enviado 🚀')">Enviar mensaje</button>
+  <button onclick="alert('Gracias por contactarme 🚀')">Enviar mensaje</button>
 </section>
 
 <footer>
-  <p>© 2026 - Portafolio Pro</p>
+  <p>© 2026 - Luis Fernando</p>
 </footer>
 
 <script>
-  // Scroll animaciones
-  const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section");
 
-  window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        sec.classList.add("visible");
-      }
-    });
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+      sec.classList.add("visible");
+    }
   });
 
-  // Animación barras
-  window.addEventListener("scroll", () => {
-    document.querySelectorAll(".progress").forEach(bar => {
-      const top = bar.getBoundingClientRect().top;
-      if (top < window.innerHeight) {
-        bar.style.width = bar.dataset.width;
-      }
-    });
+  document.querySelectorAll(".progress").forEach(bar => {
+    if (bar.getBoundingClientRect().top < window.innerHeight) {
+      bar.style.width = bar.dataset.width;
+    }
   });
+});
 </script>
 
 </body>
